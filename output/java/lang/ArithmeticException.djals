@@ -1,0 +1,16 @@
+//-------------- java_lang_ArithmeticException --------------//
+module java_lang_ArithmeticException
+abstract one sig java_lang_ArithmeticException extends java_lang_RuntimeException {}
+{}
+one sig java_lang_ArithmeticExceptionLit extends java_lang_ArithmeticException {}
+{}
+
+program java_lang_ArithmeticException::Constructor[
+  var thiz:java_lang_ArithmeticException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

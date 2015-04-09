@@ -1,0 +1,637 @@
+//-------------- roops_core_objects_SinglyLinkedListContainsBug7 --------------//
+module roops_core_objects_SinglyLinkedListContainsBug7
+sig roops_core_objects_SinglyLinkedListContainsBug7 extends java_lang_Object {}
+{}
+field roops_core_objects_SinglyLinkedListContainsBug7_header:(roops_core_objects_SinglyLinkedListContainsBug7)->one(null+roops_core_objects_SinglyLinkedListNode) {}
+
+object_invariant
+   all n:null+roops_core_objects_SinglyLinkedListNode | {
+     liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+     implies 
+             equ[fun_set_contains[fun_reach[n.roops_core_objects_SinglyLinkedListNode_next,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n],
+                false]
+   
+   }
+
+
+
+program roops_core_objects_SinglyLinkedListContainsBug7::Constructor[
+  var thiz:roops_core_objects_SinglyLinkedListContainsBug7,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   {
+      skip;
+      {
+         throw:=null;
+         var exit_stmt_reached:boolean;
+         exit_stmt_reached:=false;
+         if (
+           throw=null)
+         and 
+         (
+           exit_stmt_reached=false){
+            if isEmptyOrNull[thiz]{
+               throw:=java_lang_NullPointerExceptionLit;
+            } else {
+               thiz.roops_core_objects_SinglyLinkedListContainsBug7_header:=((null+roops_core_objects_SinglyLinkedListNode) & (null));
+            };
+         } else {
+            skip;
+         };
+      
+      }
+      skip;
+   
+   }
+
+
+program roops_core_objects_SinglyLinkedListContainsBug7::contains[
+  var thiz:roops_core_objects_SinglyLinkedListContainsBug7,
+  var throw:java_lang_Throwable+null,
+  var return:boolean,
+  var valueParam:java_lang_Object+null] 
+Specification 
+{
+  SpecCase #0 {
+   requires {
+      true=true
+   }
+   
+   ensures {
+      instanceOf[throw',
+                java_lang_RuntimeException]
+      implies 
+              liftExpression[false]
+   }
+   
+   ensures {
+      (
+        throw'=null)
+      implies 
+              (
+                all n:null+roops_core_objects_SinglyLinkedListNode | {
+                  liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                  implies 
+                          equ[n.roops_core_objects_SinglyLinkedListNode_value,
+                             n.roops_core_objects_SinglyLinkedListNode_value']
+                
+                }
+              )
+   }
+   
+   ensures {
+      (
+        throw'=null)
+      implies 
+              (
+                equ[return',
+                   true]
+                implies 
+                        (
+                          some n:null+roops_core_objects_SinglyLinkedListNode | {
+                            liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                            and 
+                            equ[n.roops_core_objects_SinglyLinkedListNode_value',
+                               valueParam']
+                          
+                          }
+                        )
+              )
+   }
+   
+   ensures {
+      (
+        throw'=null)
+      implies 
+              (
+                (
+                  some n:null+roops_core_objects_SinglyLinkedListNode | {
+                    liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                    and 
+                    equ[n.roops_core_objects_SinglyLinkedListNode_value',
+                       valueParam']
+                  
+                  }
+                )
+                implies 
+                        equ[return',
+                           true]
+              )
+   }
+   
+   modifies {
+   EVERYTHING}
+  }
+}
+Implementation 
+
+   {
+      skip;
+      {
+         throw:=null;
+         var exit_stmt_reached:boolean;
+         exit_stmt_reached:=false;
+         {
+            var param_valueParam_0:java_lang_Object+null;
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               param_valueParam_0:=valueParam;
+            } else {
+               skip;
+            };
+            var t_1:boolean;
+            var t_2:boolean;
+            var t_3:boolean;
+            var var_1_current:null+roops_core_objects_SinglyLinkedListNode;
+            var var_2_result:boolean;
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               if isEmptyOrNull[thiz]{
+                  throw:=java_lang_NullPointerExceptionLit;
+               } else {
+                  var_1_current:=thiz.roops_core_objects_SinglyLinkedListContainsBug7_header;
+               };
+            } else {
+               skip;
+            };
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               var_2_result:=false;
+            } else {
+               skip;
+            };
+            var var_3_ws_1:boolean;
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               t_2:=(equ[var_2_result,
+                  false]=>(true)else(false));
+            } else {
+               skip;
+            };
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               if t_2=true   {
+                     if (
+                       throw=null)
+                     and 
+                     (
+                       exit_stmt_reached=false){
+                        t_3:=(neq[var_1_current,
+                           null]=>(true)else(false));
+                     } else {
+                        skip;
+                     };
+                     if (
+                       throw=null)
+                     and 
+                     (
+                       exit_stmt_reached=false){
+                        if t_3=true{
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              t_1:=true;
+                           } else {
+                              skip;
+                           };
+                        } else {
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              t_1:=false;
+                           } else {
+                              skip;
+                           };
+                        };
+                     } else {
+                        skip;
+                     };
+                  
+                  }
+                else {
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     t_1:=false;
+                  } else {
+                     skip;
+                  };
+               };
+            } else {
+               skip;
+            };
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               var_3_ws_1:=t_1;
+            } else {
+               skip;
+            };
+            while liftExpression[var_3_ws_1]
+            and 
+            (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false)
+            
+               {
+                  var variant_0:JavaPrimitiveIntegerValue;
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     variant_0:=fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]];
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if pred_java_primitive_integer_value_lt[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                                         JavaPrimitiveIntegerLiteral0]   {
+                           createObject<java_lang_Object>[throw];
+                           if isEmptyOrNull[throw]{
+                              throw:=java_lang_NullPointerExceptionLit;
+                           } else {
+                              call Constructor[throw,throw];
+                           };
+                        
+                        }
+                      else {
+                        skip;
+                     };
+                  } else {
+                     skip;
+                  };
+                  var t_6:boolean;
+                  var t_7:boolean;
+                  var t_8:boolean;
+                  var t_9:boolean;
+                  var t_10:boolean;
+                  var t_11:boolean;
+                  var t_12:boolean;
+                  var var_4_equalVal:boolean;
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     t_7:=(neq[valueParam,
+                        null]=>(true)else(false));
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if t_7=true   {
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              t_8:=(equ[var_1_current.roops_core_objects_SinglyLinkedListNode_value,
+                                 null]=>(true)else(false));
+                           } else {
+                              skip;
+                           };
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              if t_8=true{
+                                 if (
+                                   throw=null)
+                                 and 
+                                 (
+                                   exit_stmt_reached=false){
+                                    t_6:=true;
+                                 } else {
+                                    skip;
+                                 };
+                              } else {
+                                 if (
+                                   throw=null)
+                                 and 
+                                 (
+                                   exit_stmt_reached=false){
+                                    t_6:=false;
+                                 } else {
+                                    skip;
+                                 };
+                              };
+                           } else {
+                              skip;
+                           };
+                        
+                        }
+                      else {
+                        if (
+                          throw=null)
+                        and 
+                        (
+                          exit_stmt_reached=false){
+                           t_6:=false;
+                        } else {
+                           skip;
+                        };
+                     };
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if t_6=true{
+                        if (
+                          throw=null)
+                        and 
+                        (
+                          exit_stmt_reached=false){
+                           var_4_equalVal:=true;
+                        } else {
+                           skip;
+                        };
+                     } else    {
+                           var t_5:boolean;
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              t_5:=(neq[valueParam,
+                                 null]=>(true)else(false));
+                           } else {
+                              skip;
+                           };
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              if t_5=true   {
+                                    var t_4:boolean;
+                                    if (
+                                      throw=null)
+                                    and 
+                                    (
+                                      exit_stmt_reached=false){
+                                       t_4:=(equ[valueParam,
+                                          var_1_current.roops_core_objects_SinglyLinkedListNode_value]=>(true)else(false));
+                                    } else {
+                                       skip;
+                                    };
+                                    if (
+                                      throw=null)
+                                    and 
+                                    (
+                                      exit_stmt_reached=false){
+                                       if t_4=true{
+                                          if (
+                                            throw=null)
+                                          and 
+                                          (
+                                            exit_stmt_reached=false){
+                                             var_4_equalVal:=true;
+                                          } else {
+                                             skip;
+                                          };
+                                       } else {
+                                          if (
+                                            throw=null)
+                                          and 
+                                          (
+                                            exit_stmt_reached=false){
+                                             var_4_equalVal:=false;
+                                          } else {
+                                             skip;
+                                          };
+                                       };
+                                    } else {
+                                       skip;
+                                    };
+                                 
+                                 }
+                               else {
+                                 if (
+                                   throw=null)
+                                 and 
+                                 (
+                                   exit_stmt_reached=false){
+                                    var_4_equalVal:=false;
+                                 } else {
+                                    skip;
+                                 };
+                              };
+                           } else {
+                              skip;
+                           };
+                        
+                        }
+                     ;
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     t_9:=(equ[var_4_equalVal,
+                        true]=>(true)else(false));
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if t_9=true{
+                        if (
+                          throw=null)
+                        and 
+                        (
+                          exit_stmt_reached=false){
+                           var_2_result:=true;
+                        } else {
+                           skip;
+                        };
+                     } else {
+                        skip;
+                     };
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if isEmptyOrNull[var_1_current]{
+                        throw:=java_lang_NullPointerExceptionLit;
+                     } else {
+                        var_1_current:=var_1_current.roops_core_objects_SinglyLinkedListNode_next;
+                     };
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     t_11:=(equ[var_2_result,
+                        false]=>(true)else(false));
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if t_11=true   {
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              t_12:=(neq[var_1_current,
+                                 null]=>(true)else(false));
+                           } else {
+                              skip;
+                           };
+                           if (
+                             throw=null)
+                           and 
+                           (
+                             exit_stmt_reached=false){
+                              if t_12=true{
+                                 if (
+                                   throw=null)
+                                 and 
+                                 (
+                                   exit_stmt_reached=false){
+                                    t_10:=true;
+                                 } else {
+                                    skip;
+                                 };
+                              } else {
+                                 if (
+                                   throw=null)
+                                 and 
+                                 (
+                                   exit_stmt_reached=false){
+                                    t_10:=false;
+                                 } else {
+                                    skip;
+                                 };
+                              };
+                           } else {
+                              skip;
+                           };
+                        
+                        }
+                      else {
+                        if (
+                          throw=null)
+                        and 
+                        (
+                          exit_stmt_reached=false){
+                           t_10:=false;
+                        } else {
+                           skip;
+                        };
+                     };
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     var_3_ws_1:=t_10;
+                  } else {
+                     skip;
+                  };
+                  if (
+                    throw=null)
+                  and 
+                  (
+                    exit_stmt_reached=false){
+                     if pred_java_primitive_integer_value_gte[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                                          variant_0]   {
+                           createObject<java_lang_Object>[throw];
+                           if isEmptyOrNull[throw]{
+                              throw:=java_lang_NullPointerExceptionLit;
+                           } else {
+                              call Constructor[throw,throw];
+                           };
+                        
+                        }
+                      else {
+                        skip;
+                     };
+                  } else {
+                     skip;
+                  };
+               
+               }
+            ;
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false)   {
+                  return:=var_2_result;
+                  exit_stmt_reached:=true;
+               
+               }
+             else {
+               skip;
+            };
+         
+         }
+      
+      }
+      skip;
+   
+   }
+
+
+

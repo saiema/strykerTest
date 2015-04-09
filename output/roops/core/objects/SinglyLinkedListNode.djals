@@ -1,0 +1,55 @@
+//-------------- roops_core_objects_SinglyLinkedListNode --------------//
+module roops_core_objects_SinglyLinkedListNode
+sig roops_core_objects_SinglyLinkedListNode extends java_lang_Object {}
+{}
+field roops_core_objects_SinglyLinkedListNode_next:(roops_core_objects_SinglyLinkedListNode)->one(null+roops_core_objects_SinglyLinkedListNode) {}
+field roops_core_objects_SinglyLinkedListNode_value:(roops_core_objects_SinglyLinkedListNode)->one(java_lang_Object+null) {}
+
+program roops_core_objects_SinglyLinkedListNode::Constructor[
+  var thiz:roops_core_objects_SinglyLinkedListNode,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   {
+      skip;
+      {
+         throw:=null;
+         var exit_stmt_reached:boolean;
+         exit_stmt_reached:=false;
+         {
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               if isEmptyOrNull[thiz]{
+                  throw:=java_lang_NullPointerExceptionLit;
+               } else {
+                  thiz.roops_core_objects_SinglyLinkedListNode_next:=((null+roops_core_objects_SinglyLinkedListNode) & (null));
+               };
+            } else {
+               skip;
+            };
+            if (
+              throw=null)
+            and 
+            (
+              exit_stmt_reached=false){
+               if isEmptyOrNull[thiz]{
+                  throw:=java_lang_NullPointerExceptionLit;
+               } else {
+                  thiz.roops_core_objects_SinglyLinkedListNode_value:=((java_lang_Object+null) & (null));
+               };
+            } else {
+               skip;
+            };
+         
+         }
+      
+      }
+      skip;
+   
+   }
+
+
+

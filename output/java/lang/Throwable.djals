@@ -1,0 +1,16 @@
+//-------------- java_lang_Throwable --------------//
+module java_lang_Throwable
+abstract sig java_lang_Throwable extends java_lang_Object {}
+{}
+one sig java_lang_ThrowableLit extends java_lang_Throwable {}
+{}
+
+program java_lang_Throwable::Constructor[
+  var thiz:java_lang_Throwable,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

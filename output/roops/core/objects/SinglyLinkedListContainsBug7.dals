@@ -1,0 +1,1080 @@
+sig roops_core_objects_SinglyLinkedListContainsBug7 extends java_lang_Object {}
+{}
+
+
+
+
+pred precondition_roops_core_objects_SinglyLinkedListContainsBug7_contains_0[
+  Iterator_contains:univ->univ,
+  JMLObjectSequence_contains:univ -> (Int -> univ),
+  auditLogXMLReaderHashCode:univ->univ,
+  booleanValue:univ->univ,
+  byteHashCode:univ->univ,
+  characterHashCode:univ->univ,
+  dateHashCode:univ->univ,
+  integerHashCode:univ->univ,
+  java_lang_Boolean_FALSE:univ->univ,
+  java_lang_Boolean_TRUE:univ->univ,
+  java_lang_IntArray_length:univ->univ,
+  java_lang_ObjectArray_length:univ->univ,
+  java_util_List_seq:univ->univ,
+  java_util_Map_entries:univ->univ,
+  java_util_Set_elems:univ->univ,
+  return:univ,
+  roops_core_objects_SinglyLinkedListContainsBug7_header:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value:univ->univ,
+  saxSourceHashCode:univ->univ,
+  stringHashCode:univ->univ,
+  stringLength:univ->univ,
+  thiz:univ,
+  throw:univ,
+  usedObjects:univ,
+  valueParam:univ
+]{
+   equ[throw,
+      null]
+   and 
+   roops_core_objects_SinglyLinkedListContainsBug7_object_invariant[roops_core_objects_SinglyLinkedListContainsBug7_header,
+                                                                   roops_core_objects_SinglyLinkedListNode_next,
+                                                                   thiz]
+   and 
+   roops_core_objects_SinglyLinkedListContainsBug7_requires[Iterator_contains,
+                                                           JMLObjectSequence_contains,
+                                                           auditLogXMLReaderHashCode,
+                                                           booleanValue,
+                                                           byteHashCode,
+                                                           characterHashCode,
+                                                           dateHashCode,
+                                                           integerHashCode,
+                                                           java_lang_Boolean_FALSE,
+                                                           java_lang_Boolean_TRUE,
+                                                           java_lang_IntArray_length,
+                                                           java_lang_ObjectArray_length,
+                                                           java_util_List_seq,
+                                                           java_util_Map_entries,
+                                                           java_util_Set_elems,
+                                                           return,
+                                                           roops_core_objects_SinglyLinkedListContainsBug7_header,
+                                                           roops_core_objects_SinglyLinkedListNode_next,
+                                                           roops_core_objects_SinglyLinkedListNode_value,
+                                                           saxSourceHashCode,
+                                                           stringHashCode,
+                                                           stringLength,
+                                                           thiz,
+                                                           usedObjects,
+                                                           valueParam]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7_object_invariant[
+  roops_core_objects_SinglyLinkedListContainsBug7_header:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  thiz:univ
+]{
+   all n:null+roops_core_objects_SinglyLinkedListNode | {
+     liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+     implies 
+             equ[fun_set_contains[fun_reach[n.roops_core_objects_SinglyLinkedListNode_next,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n],
+                false]
+   
+   }
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition16[
+  t_4:univ
+]{
+   t_4=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition12[
+  t_8:univ
+]{
+   t_8=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition17[
+  t_4:univ
+]{
+   not (
+     t_4=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition13[
+  t_8:univ
+]{
+   not (
+     t_8=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition14[
+  t_7:univ
+]{
+   t_7=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition10[
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  var_1_current:univ
+]{
+   pred_java_primitive_integer_value_lt[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                       JavaPrimitiveIntegerLiteral0]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition30[
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  var_1_current:univ,
+  variant_0:univ
+]{
+   pred_java_primitive_integer_value_gte[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                        variant_0]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition15[
+  t_7:univ
+]{
+   not (
+     t_7=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition11[
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  var_1_current:univ
+]{
+   not (
+     pred_java_primitive_integer_value_lt[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                         JavaPrimitiveIntegerLiteral0]
+   )
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition31[
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  var_1_current:univ,
+  variant_0:univ
+]{
+   not (
+     pred_java_primitive_integer_value_gte[fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]],
+                                          variant_0]
+   )
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition18[
+  t_5:univ
+]{
+   t_5=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition19[
+  t_5:univ
+]{
+   not (
+     t_5=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition27[
+  t_12:univ
+]{
+   not (
+     t_12=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition32[
+  exit_stmt_reached:univ,
+  throw:univ,
+  var_3_ws_1:univ
+]{
+   liftExpression[var_3_ws_1]
+   and 
+   (
+     throw=null)
+   and 
+   (
+     exit_stmt_reached=false)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition29[
+  t_11:univ
+]{
+   not (
+     t_11=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition26[
+  t_12:univ
+]{
+   t_12=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition28[
+  t_11:univ
+]{
+   t_11=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition24[
+  var_1_current:univ
+]{
+   isEmptyOrNull[var_1_current]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition1[
+  exit_stmt_reached:univ,
+  throw:univ
+]{
+   not (
+     (
+       throw=null)
+     and 
+     (
+       exit_stmt_reached=false)
+   )
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition0[
+  exit_stmt_reached:univ,
+  throw:univ
+]{
+   (
+     throw=null)
+   and 
+   (
+     exit_stmt_reached=false)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition2[
+  thiz:univ
+]{
+   isEmptyOrNull[thiz]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition25[
+  var_1_current:univ
+]{
+   not (
+     isEmptyOrNull[var_1_current])
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition3[
+  thiz:univ
+]{
+   not (
+     isEmptyOrNull[thiz])
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7_ensures[
+  return':univ,
+  roops_core_objects_SinglyLinkedListContainsBug7_header:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value':univ->univ,
+  thiz:univ,
+  throw':univ,
+  valueParam':univ
+]{
+   (
+     instanceOf[throw',
+               java_lang_RuntimeException]
+     implies 
+             liftExpression[false]
+   )
+   and 
+   (
+     (
+       throw'=null)
+     implies 
+             (
+               all n:null+roops_core_objects_SinglyLinkedListNode | {
+                 liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                 implies 
+                         equ[n.roops_core_objects_SinglyLinkedListNode_value,
+                            n.roops_core_objects_SinglyLinkedListNode_value']
+               
+               }
+             )
+   )
+   and 
+   (
+     (
+       throw'=null)
+     implies 
+             (
+               equ[return',
+                  true]
+               implies 
+                       (
+                         some n:null+roops_core_objects_SinglyLinkedListNode | {
+                           liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                           and 
+                           equ[n.roops_core_objects_SinglyLinkedListNode_value',
+                              valueParam']
+                         
+                         }
+                       )
+             )
+   )
+   and 
+   (
+     (
+       throw'=null)
+     implies 
+             (
+               (
+                 some n:null+roops_core_objects_SinglyLinkedListNode | {
+                   liftExpression[fun_set_contains[fun_reach[thiz.roops_core_objects_SinglyLinkedListContainsBug7_header,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next],n]]
+                   and 
+                   equ[n.roops_core_objects_SinglyLinkedListNode_value',
+                      valueParam']
+                 
+                 }
+               )
+               implies 
+                       equ[return',
+                          true]
+             )
+   )
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition6[
+  t_2:univ
+]{
+   t_2=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition23[
+  t_9:univ
+]{
+   not (
+     t_9=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition5[
+  t_3:univ
+]{
+   not (
+     t_3=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition22[
+  t_9:univ
+]{
+   t_9=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition7[
+  t_2:univ
+]{
+   not (
+     t_2=true)
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition4[
+  t_3:univ
+]{
+   t_3=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition9[
+  throw:univ
+]{
+   not (
+     isEmptyOrNull[throw])
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition8[
+  throw:univ
+]{
+   isEmptyOrNull[throw]
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7_requires[
+  Iterator_contains:univ->univ,
+  JMLObjectSequence_contains:univ -> (Int -> univ),
+  auditLogXMLReaderHashCode:univ->univ,
+  booleanValue:univ->univ,
+  byteHashCode:univ->univ,
+  characterHashCode:univ->univ,
+  dateHashCode:univ->univ,
+  integerHashCode:univ->univ,
+  java_lang_Boolean_FALSE:univ->univ,
+  java_lang_Boolean_TRUE:univ->univ,
+  java_lang_IntArray_length:univ->univ,
+  java_lang_ObjectArray_length:univ->univ,
+  java_util_List_seq:univ->univ,
+  java_util_Map_entries:univ->univ,
+  java_util_Set_elems:univ->univ,
+  return:univ,
+  roops_core_objects_SinglyLinkedListContainsBug7_header:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value:univ->univ,
+  saxSourceHashCode:univ->univ,
+  stringHashCode:univ->univ,
+  stringLength:univ->univ,
+  thiz:univ,
+  usedObjects:univ,
+  valueParam:univ
+]{
+   (
+     true=true)
+   and 
+   (
+     usedObjects=fun_weak_reach[none+thiz+return+valueParam+(ClassFields.java_lang_Boolean_TRUE)+(ClassFields.java_lang_Boolean_FALSE),java_lang_Object,(none)->(none)+roops_core_objects_SinglyLinkedListNode_next+roops_core_objects_SinglyLinkedListNode_value+roops_core_objects_SinglyLinkedListContainsBug7_header+booleanValue+JMLObjectSequence_contains+integerHashCode+java_util_Set_elems+java_lang_IntArray_length+stringLength+stringHashCode+dateHashCode+byteHashCode+characterHashCode+Iterator_contains+java_util_List_seq+auditLogXMLReaderHashCode+java_lang_ObjectArray_length+java_util_Map_entries+saxSourceHashCode])
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition20[
+  t_6:univ
+]{
+   t_6=true
+
+}
+
+pred roops_core_objects_SinglyLinkedListContainsBug7Condition21[
+  t_6:univ
+]{
+   not (
+     t_6=true)
+
+}
+
+pred postcondition_roops_core_objects_SinglyLinkedListContainsBug7_contains_0[
+  return':univ,
+  roops_core_objects_SinglyLinkedListContainsBug7_header:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_next:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value:univ->univ,
+  roops_core_objects_SinglyLinkedListNode_value':univ->univ,
+  thiz:univ,
+  throw':univ,
+  valueParam':univ
+]{
+   roops_core_objects_SinglyLinkedListContainsBug7_ensures[return',
+                                                          roops_core_objects_SinglyLinkedListContainsBug7_header,
+                                                          roops_core_objects_SinglyLinkedListNode_next,
+                                                          roops_core_objects_SinglyLinkedListNode_value,
+                                                          roops_core_objects_SinglyLinkedListNode_value',
+                                                          thiz,
+                                                          throw',
+                                                          valueParam']
+   and 
+   (
+     not (
+       throw'=AssertionFailureLit)
+   )
+
+}
+
+program roops_core_objects_SinglyLinkedListContainsBug7_contains_0[
+  thiz:roops_core_objects_SinglyLinkedListContainsBug7,
+  throw:java_lang_Throwable+null,
+  return:boolean,
+  valueParam:java_lang_Object+null,
+  java_lang_ObjectArray_length:(java_lang_ObjectArray)->one(JavaPrimitiveIntegerValue),
+  saxSourceHashCode:(javax_xml_transform_sax_SAXSource)->one(Int),
+  java_lang_IntArray_contents:java_lang_IntArray -> (JavaPrimitiveIntegerValue set -> lone JavaPrimitiveIntegerValue),
+  java_util_Map_entries:(java_util_Map)->(java_lang_Object set),
+  roops_core_objects_SinglyLinkedListContainsBug7_header:(roops_core_objects_SinglyLinkedListContainsBug7)->one(null+roops_core_objects_SinglyLinkedListNode),
+  java_lang_ObjectArray_contents:java_lang_ObjectArray -> (JavaPrimitiveIntegerValue set -> lone (java_lang_Object + null)),
+  java_util_Set_elems:(java_util_Set)->(java_lang_Object+null),
+  byteHashCode:(java_lang_Byte)->one(Int),
+  java_util_List_seq:(java_util_List->JavaPrimitiveIntegerValue)->one(univ),
+  JMLObjectSet_contains:(org_jmlspecs_models_JMLObjectSet)->set univ,
+  booleanValue:(java_lang_Boolean)->one(boolean),
+  Iterator_contains:(java_util_Iterator)->(set univ),
+  roops_core_objects_SinglyLinkedListNode_next:(roops_core_objects_SinglyLinkedListNode)->one(null+roops_core_objects_SinglyLinkedListNode),
+  roops_core_objects_SinglyLinkedListNode_value:(roops_core_objects_SinglyLinkedListNode)->one(java_lang_Object+null),
+  auditLogXMLReaderHashCode:(sos_koa_AuditLogXMLReader)->one(Int),
+  dateHashCode:(java_util_Date)->one(Int),
+  stringLength:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  characterHashCode:(java_lang_Character)->one(Int),
+  stringHashCode:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  JMLObjectSequence_contains:(org_jmlspecs_models_JMLObjectSequence)->(seq(univ)),
+  java_lang_Boolean_TRUE:(ClassFields)->one(java_lang_Boolean),
+  java_lang_Boolean_FALSE:(ClassFields)->one(java_lang_Boolean),
+  integerHashCode:(java_lang_Integer)->one(JavaPrimitiveIntegerValue),
+  java_lang_IntArray_length:(java_lang_IntArray)->one(JavaPrimitiveIntegerValue),
+  usedObjects:set (java_lang_Object)
+] var [
+  var_4_equalVal:boolean,
+  param_valueParam_0:java_lang_Object+null,
+  t_11:boolean,
+  t_12:boolean,
+  t_10:boolean,
+  t_2:boolean,
+  t_3:boolean,
+  exit_stmt_reached:boolean,
+  t_1:boolean,
+  var_1_current:null+roops_core_objects_SinglyLinkedListNode,
+  var_2_result:boolean,
+  variant_0:JavaPrimitiveIntegerValue,
+  t_8:boolean,
+  t_9:boolean,
+  t_6:boolean,
+  var_3_ws_1:boolean,
+  t_7:boolean,
+  t_4:boolean,
+  t_5:boolean
+]{
+   skip;
+   throw:=null;
+   skip;
+   exit_stmt_reached:=false;
+   skip;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      param_valueParam_0:=valueParam
+   
+   } else {
+      skip
+   
+   }
+   ;
+   skip;
+   skip;
+   skip;
+   skip;
+   skip;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition2[thiz]  {
+         throw:=java_lang_NullPointerExceptionLit
+      
+      } else {
+         var_1_current:=thiz.roops_core_objects_SinglyLinkedListContainsBug7_header
+      
+      }
+   
+   } else {
+      skip
+   
+   }
+   ;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      var_2_result:=false
+   
+   } else {
+      skip
+   
+   }
+   ;
+   skip;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      t_2:=(equ[var_2_result,false]=>(true)else(false))
+   
+   } else {
+      skip
+   
+   }
+   ;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition6[t_2]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+            t_3:=(neq[var_1_current,null]=>(true)else(false))
+         
+         } else {
+            skip
+         
+         }
+         ;
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition4[t_3]  {
+               if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                  t_1:=true
+               
+               } else {
+                  skip
+               
+               }
+            
+            } else {
+               if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                  t_1:=false
+               
+               } else {
+                  skip
+               
+               }
+            
+            }
+         
+         } else {
+            skip
+         
+         }
+      
+      } else {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+            t_1:=false
+         
+         } else {
+            skip
+         
+         }
+      
+      }
+   
+   } else {
+      skip
+   
+   }
+   ;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      var_3_ws_1:=t_1
+   
+   } else {
+      skip
+   
+   }
+   ;
+   while roops_core_objects_SinglyLinkedListContainsBug7Condition32[exit_stmt_reached,throw,var_3_ws_1]do {
+      skip;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         variant_0:=fun_java_primitive_integer_value_size_of[fun_reach[var_1_current,roops_core_objects_SinglyLinkedListNode,roops_core_objects_SinglyLinkedListNode_next]]
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition10[roops_core_objects_SinglyLinkedListNode_next,var_1_current]  {
+            getUnusedObject[throw,usedObjects];
+            assume instanceOf[throw,java_lang_Object];
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition8[throw]  {
+               throw:=java_lang_NullPointerExceptionLit
+            
+            } else {
+               call java_lang_Throwable_Constructor_0[throw,throw,java_lang_ObjectArray_length,saxSourceHashCode,java_lang_IntArray_contents,java_util_Map_entries,roops_core_objects_SinglyLinkedListContainsBug7_header,java_lang_ObjectArray_contents,java_util_Set_elems,byteHashCode,java_util_List_seq,JMLObjectSet_contains,booleanValue,Iterator_contains,roops_core_objects_SinglyLinkedListNode_next,roops_core_objects_SinglyLinkedListNode_value,auditLogXMLReaderHashCode,dateHashCode,stringLength,characterHashCode,stringHashCode,JMLObjectSequence_contains,java_lang_Boolean_TRUE,java_lang_Boolean_FALSE,integerHashCode,java_lang_IntArray_length,usedObjects]
+            
+            }
+         
+         } else {
+            skip
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      skip;
+      skip;
+      skip;
+      skip;
+      skip;
+      skip;
+      skip;
+      skip;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         t_7:=(neq[valueParam,null]=>(true)else(false))
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition14[t_7]  {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               t_8:=(equ[var_1_current.roops_core_objects_SinglyLinkedListNode_value,null]=>(true)else(false))
+            
+            } else {
+               skip
+            
+            }
+            ;
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               if roops_core_objects_SinglyLinkedListContainsBug7Condition12[t_8]  {
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     t_6:=true
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               } else {
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     t_6:=false
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               }
+            
+            } else {
+               skip
+            
+            }
+         
+         } else {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               t_6:=false
+            
+            } else {
+               skip
+            
+            }
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition20[t_6]  {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               var_4_equalVal:=true
+            
+            } else {
+               skip
+            
+            }
+         
+         } else {
+            skip;
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               t_5:=(neq[valueParam,null]=>(true)else(false))
+            
+            } else {
+               skip
+            
+            }
+            ;
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               if roops_core_objects_SinglyLinkedListContainsBug7Condition18[t_5]  {
+                  skip;
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     t_4:=(equ[valueParam,var_1_current.roops_core_objects_SinglyLinkedListNode_value]=>(true)else(false))
+                  
+                  } else {
+                     skip
+                  
+                  }
+                  ;
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     if roops_core_objects_SinglyLinkedListContainsBug7Condition16[t_4]  {
+                        if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                           var_4_equalVal:=true
+                        
+                        } else {
+                           skip
+                        
+                        }
+                     
+                     } else {
+                        if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                           var_4_equalVal:=false
+                        
+                        } else {
+                           skip
+                        
+                        }
+                     
+                     }
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               } else {
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     var_4_equalVal:=false
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               }
+            
+            } else {
+               skip
+            
+            }
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         t_9:=(equ[var_4_equalVal,true]=>(true)else(false))
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition22[t_9]  {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               var_2_result:=true
+            
+            } else {
+               skip
+            
+            }
+         
+         } else {
+            skip
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition24[var_1_current]  {
+            throw:=java_lang_NullPointerExceptionLit
+         
+         } else {
+            var_1_current:=var_1_current.roops_core_objects_SinglyLinkedListNode_next
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         t_11:=(equ[var_2_result,false]=>(true)else(false))
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition28[t_11]  {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               t_12:=(neq[var_1_current,null]=>(true)else(false))
+            
+            } else {
+               skip
+            
+            }
+            ;
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               if roops_core_objects_SinglyLinkedListContainsBug7Condition26[t_12]  {
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     t_10:=true
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               } else {
+                  if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+                     t_10:=false
+                  
+                  } else {
+                     skip
+                  
+                  }
+               
+               }
+            
+            } else {
+               skip
+            
+            }
+         
+         } else {
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+               t_10:=false
+            
+            } else {
+               skip
+            
+            }
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         var_3_ws_1:=t_10
+      
+      } else {
+         skip
+      
+      }
+      ;
+      if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+         if roops_core_objects_SinglyLinkedListContainsBug7Condition30[roops_core_objects_SinglyLinkedListNode_next,var_1_current,variant_0]  {
+            getUnusedObject[throw,usedObjects];
+            assume instanceOf[throw,java_lang_Object];
+            if roops_core_objects_SinglyLinkedListContainsBug7Condition8[throw]  {
+               throw:=java_lang_NullPointerExceptionLit
+            
+            } else {
+               call java_lang_Throwable_Constructor_0[throw,throw,java_lang_ObjectArray_length,saxSourceHashCode,java_lang_IntArray_contents,java_util_Map_entries,roops_core_objects_SinglyLinkedListContainsBug7_header,java_lang_ObjectArray_contents,java_util_Set_elems,byteHashCode,java_util_List_seq,JMLObjectSet_contains,booleanValue,Iterator_contains,roops_core_objects_SinglyLinkedListNode_next,roops_core_objects_SinglyLinkedListNode_value,auditLogXMLReaderHashCode,dateHashCode,stringLength,characterHashCode,stringHashCode,JMLObjectSequence_contains,java_lang_Boolean_TRUE,java_lang_Boolean_FALSE,integerHashCode,java_lang_IntArray_length,usedObjects]
+            
+            }
+         
+         } else {
+            skip
+         
+         }
+      
+      } else {
+         skip
+      
+      }
+   
+   }
+   ;
+   if roops_core_objects_SinglyLinkedListContainsBug7Condition0[exit_stmt_reached,throw]  {
+      return:=var_2_result;
+      exit_stmt_reached:=true
+   
+   } else {
+      skip
+   
+   }
+   ;
+   skip
+
+}
+
+assertCorrectness check_roops_core_objects_SinglyLinkedListContainsBug7_contains_0[
+  Iterator_contains:(java_util_Iterator)->(set univ),
+  JMLObjectSequence_contains:(org_jmlspecs_models_JMLObjectSequence)->(seq(univ)),
+  JMLObjectSet_contains:(org_jmlspecs_models_JMLObjectSet)->set univ,
+  auditLogXMLReaderHashCode:(sos_koa_AuditLogXMLReader)->one(Int),
+  booleanValue:(java_lang_Boolean)->one(boolean),
+  byteHashCode:(java_lang_Byte)->one(Int),
+  characterHashCode:(java_lang_Character)->one(Int),
+  dateHashCode:(java_util_Date)->one(Int),
+  exit_stmt_reached:boolean,
+  integerHashCode:(java_lang_Integer)->one(JavaPrimitiveIntegerValue),
+  java_lang_Boolean_FALSE:(ClassFields)->one(java_lang_Boolean),
+  java_lang_Boolean_TRUE:(ClassFields)->one(java_lang_Boolean),
+  java_lang_IntArray_contents:java_lang_IntArray -> (JavaPrimitiveIntegerValue set -> lone JavaPrimitiveIntegerValue),
+  java_lang_IntArray_length:(java_lang_IntArray)->one(JavaPrimitiveIntegerValue),
+  java_lang_ObjectArray_contents:java_lang_ObjectArray -> (JavaPrimitiveIntegerValue set -> lone (java_lang_Object + null)),
+  java_lang_ObjectArray_length:(java_lang_ObjectArray)->one(JavaPrimitiveIntegerValue),
+  java_util_List_seq:(java_util_List->JavaPrimitiveIntegerValue)->one(univ),
+  java_util_Map_entries:(java_util_Map)->(java_lang_Object set),
+  java_util_Set_elems:(java_util_Set)->(java_lang_Object+null),
+  param_valueParam_0:java_lang_Object+null,
+  return:boolean,
+  roops_core_objects_SinglyLinkedListContainsBug7_header:(roops_core_objects_SinglyLinkedListContainsBug7)->one(null+roops_core_objects_SinglyLinkedListNode),
+  roops_core_objects_SinglyLinkedListNode_next:(roops_core_objects_SinglyLinkedListNode)->one(null+roops_core_objects_SinglyLinkedListNode),
+  roops_core_objects_SinglyLinkedListNode_value:(roops_core_objects_SinglyLinkedListNode)->one(java_lang_Object+null),
+  saxSourceHashCode:(javax_xml_transform_sax_SAXSource)->one(Int),
+  stringHashCode:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  stringLength:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  t_1:boolean,
+  t_10:boolean,
+  t_11:boolean,
+  t_12:boolean,
+  t_2:boolean,
+  t_3:boolean,
+  t_4:boolean,
+  t_5:boolean,
+  t_6:boolean,
+  t_7:boolean,
+  t_8:boolean,
+  t_9:boolean,
+  thiz:roops_core_objects_SinglyLinkedListContainsBug7,
+  throw:java_lang_Throwable+null,
+  usedObjects:set (java_lang_Object),
+  valueParam:java_lang_Object+null,
+  var_1_current:null+roops_core_objects_SinglyLinkedListNode,
+  var_2_result:boolean,
+  var_3_ws_1:boolean,
+  var_4_equalVal:boolean,
+  variant_0:JavaPrimitiveIntegerValue
+]{
+pre={
+   precondition_roops_core_objects_SinglyLinkedListContainsBug7_contains_0[Iterator_contains,
+                                                                          JMLObjectSequence_contains,
+                                                                          auditLogXMLReaderHashCode,
+                                                                          booleanValue,
+                                                                          byteHashCode,
+                                                                          characterHashCode,
+                                                                          dateHashCode,
+                                                                          integerHashCode,
+                                                                          java_lang_Boolean_FALSE,
+                                                                          java_lang_Boolean_TRUE,
+                                                                          java_lang_IntArray_length,
+                                                                          java_lang_ObjectArray_length,
+                                                                          java_util_List_seq,
+                                                                          java_util_Map_entries,
+                                                                          java_util_Set_elems,
+                                                                          return,
+                                                                          roops_core_objects_SinglyLinkedListContainsBug7_header,
+                                                                          roops_core_objects_SinglyLinkedListNode_next,
+                                                                          roops_core_objects_SinglyLinkedListNode_value,
+                                                                          saxSourceHashCode,
+                                                                          stringHashCode,
+                                                                          stringLength,
+                                                                          thiz,
+                                                                          throw,
+                                                                          usedObjects,
+                                                                          valueParam]
+
+}
+program={
+   call roops_core_objects_SinglyLinkedListContainsBug7_contains_0[thiz,throw,return,valueParam,java_lang_ObjectArray_length,saxSourceHashCode,java_lang_IntArray_contents,java_util_Map_entries,roops_core_objects_SinglyLinkedListContainsBug7_header,java_lang_ObjectArray_contents,java_util_Set_elems,byteHashCode,java_util_List_seq,JMLObjectSet_contains,booleanValue,Iterator_contains,roops_core_objects_SinglyLinkedListNode_next,roops_core_objects_SinglyLinkedListNode_value,auditLogXMLReaderHashCode,dateHashCode,stringLength,characterHashCode,stringHashCode,JMLObjectSequence_contains,java_lang_Boolean_TRUE,java_lang_Boolean_FALSE,integerHashCode,java_lang_IntArray_length,usedObjects]
+
+}
+post={
+   postcondition_roops_core_objects_SinglyLinkedListContainsBug7_contains_0[return',
+                                                                           roops_core_objects_SinglyLinkedListContainsBug7_header,
+                                                                           roops_core_objects_SinglyLinkedListNode_next,
+                                                                           roops_core_objects_SinglyLinkedListNode_value,
+                                                                           roops_core_objects_SinglyLinkedListNode_value',
+                                                                           thiz,
+                                                                           throw',
+                                                                           valueParam']
+
+}
+}
+

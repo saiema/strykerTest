@@ -1,0 +1,52 @@
+//-------------- org_jmlspecs_models_JMLObjectSet --------------//
+module org_jmlspecs_models_JMLObjectSet
+abstract sig org_jmlspecs_models_JMLObjectSet {}
+{}
+field JMLObjectSet_contains:(org_jmlspecs_models_JMLObjectSet)->set univ {}
+
+program org_jmlspecs_models_JMLObjectSet::has[
+  var thiz:org_jmlspecs_models_JMLObjectSet,
+  var throw:java_lang_Throwable+null,
+  var return:boolean,
+  var e:java_lang_Object+null] 
+Specification 
+{
+  SpecCase #0 {
+   ensures {
+      equ[return',
+         fun_set_contains[thiz,e]]
+   }
+  }
+}
+Implementation 
+
+   {
+      throw:=null;
+      return:=fun_set_contains[thiz,e];
+   
+   }
+
+
+program org_jmlspecs_models_JMLObjectSet::int_size[
+  var thiz:org_jmlspecs_models_JMLObjectSet,
+  var throw:java_lang_Throwable+null,
+  var return:Int] 
+Specification 
+{
+  SpecCase #0 {
+   ensures {
+      equ[return',
+         fun_set_size[thiz]]
+   }
+  }
+}
+Implementation 
+
+   {
+      throw:=null;
+      return:=fun_set_size[thiz];
+   
+   }
+
+
+

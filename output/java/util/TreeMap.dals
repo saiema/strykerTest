@@ -1,0 +1,6 @@
+sig java_util_TreeMap extends java_util_SortedMap {}
+{}
+
+
+
+

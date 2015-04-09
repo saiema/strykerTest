@@ -1,0 +1,63 @@
+//-------------- java_lang_Boolean --------------//
+module java_lang_Boolean
+sig java_lang_Boolean extends java_lang_Object {}
+{}
+field booleanValue:(java_lang_Boolean)->one(boolean) {}
+
+program java_lang_Boolean::booleanValue[
+  var thiz:java_lang_Boolean,
+  var throw:java_lang_Throwable+null,
+  var return:boolean] 
+Implementation 
+
+   {
+      throw:=null;
+      return:=thiz.booleanValue;
+   
+   }
+
+
+program java_lang_Boolean::Constructor[
+  var thiz:java_lang_Boolean,
+  var throw:java_lang_Throwable+null,
+  var value:boolean] 
+Implementation 
+
+   {
+      throw:=null;
+      assume equ[thiz.booleanValue,
+         value];
+   
+   }
+
+
+program java_lang_Boolean::equals[
+  var thiz:java_lang_Boolean,
+  var throw:java_lang_Throwable+null,
+  var return:boolean,
+  var obj:java_lang_Object] 
+Implementation 
+
+   {
+      throw:=null;
+      if equ[obj,
+         null]{
+         return:=false;
+      } else {
+         if instanceOf[obj,
+                   java_lang_Boolean]{
+            return:=false;
+         } else {
+            if equ[thiz.booleanValue,
+               obj.booleanValue]{
+               return:=true;
+            } else {
+               return:=false;
+            };
+         };
+      };
+   
+   }
+
+
+

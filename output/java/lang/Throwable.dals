@@ -1,0 +1,43 @@
+abstract sig java_lang_Throwable extends java_lang_Object {}
+{}
+
+
+
+one sig java_lang_ThrowableLit extends java_lang_Throwable {}
+{}
+
+program java_lang_Throwable_Constructor_0[
+  thiz:java_lang_Throwable,
+  throw:java_lang_Throwable+null,
+  java_lang_ObjectArray_length:(java_lang_ObjectArray)->one(JavaPrimitiveIntegerValue),
+  saxSourceHashCode:(javax_xml_transform_sax_SAXSource)->one(Int),
+  java_lang_IntArray_contents:java_lang_IntArray -> (JavaPrimitiveIntegerValue set -> lone JavaPrimitiveIntegerValue),
+  java_util_Map_entries:(java_util_Map)->(java_lang_Object set),
+  roops_core_objects_SinglyLinkedListContainsBug7_header:(roops_core_objects_SinglyLinkedListContainsBug7)->one(null+roops_core_objects_SinglyLinkedListNode),
+  java_lang_ObjectArray_contents:java_lang_ObjectArray -> (JavaPrimitiveIntegerValue set -> lone (java_lang_Object + null)),
+  java_util_Set_elems:(java_util_Set)->(java_lang_Object+null),
+  byteHashCode:(java_lang_Byte)->one(Int),
+  java_util_List_seq:(java_util_List->JavaPrimitiveIntegerValue)->one(univ),
+  JMLObjectSet_contains:(org_jmlspecs_models_JMLObjectSet)->set univ,
+  booleanValue:(java_lang_Boolean)->one(boolean),
+  Iterator_contains:(java_util_Iterator)->(set univ),
+  roops_core_objects_SinglyLinkedListNode_next:(roops_core_objects_SinglyLinkedListNode)->one(null+roops_core_objects_SinglyLinkedListNode),
+  roops_core_objects_SinglyLinkedListNode_value:(roops_core_objects_SinglyLinkedListNode)->one(java_lang_Object+null),
+  auditLogXMLReaderHashCode:(sos_koa_AuditLogXMLReader)->one(Int),
+  dateHashCode:(java_util_Date)->one(Int),
+  stringLength:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  characterHashCode:(java_lang_Character)->one(Int),
+  stringHashCode:(java_lang_String)->one(JavaPrimitiveIntegerValue),
+  JMLObjectSequence_contains:(org_jmlspecs_models_JMLObjectSequence)->(seq(univ)),
+  java_lang_Boolean_TRUE:(ClassFields)->one(java_lang_Boolean),
+  java_lang_Boolean_FALSE:(ClassFields)->one(java_lang_Boolean),
+  integerHashCode:(java_lang_Integer)->one(JavaPrimitiveIntegerValue),
+  java_lang_IntArray_length:(java_lang_IntArray)->one(JavaPrimitiveIntegerValue),
+  usedObjects:set (java_lang_Object)
+] var [
+
+]{
+   skip
+
+}
+

@@ -1,0 +1,61 @@
+//-------------- java_lang_Integer --------------//
+module java_lang_Integer
+sig java_lang_Integer extends java_lang_Object {intValue:Int}
+{}
+program java_lang_Integer::Constructor[
+  var thiz:java_lang_Integer,
+  var throw:java_lang_Throwable+null,
+  var value:Int] 
+Implementation 
+
+   {
+      throw:=null;
+      assume equ[thiz.intValue,
+         value];
+   
+   }
+
+
+program java_lang_Integer::intValue[
+  var thiz:java_lang_Integer,
+  var throw:java_lang_Throwable+null,
+  var return:Int] 
+Implementation 
+
+   {
+      throw:=null;
+      return:=thiz.intValue;
+   
+   }
+
+
+program java_lang_Integer::equals[
+  var thiz:java_lang_Integer,
+  var throw:java_lang_Throwable+null,
+  var return:boolean,
+  var obj:java_lang_Object] 
+Implementation 
+
+   {
+      throw:=null;
+      if equ[obj,
+         null]{
+         return:=false;
+      } else {
+         if instanceOf[obj,
+                   java_lang_Integer]{
+            return:=false;
+         } else {
+            if equ[thiz.intValue,
+               obj.intValue]{
+               return:=true;
+            } else {
+               return:=false;
+            };
+         };
+      };
+   
+   }
+
+
+

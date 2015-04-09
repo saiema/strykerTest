@@ -1,0 +1,7 @@
+//-------------- java_lang_NegativeArraySizeException --------------//
+module java_lang_NegativeArraySizeException
+abstract one sig java_lang_NegativeArraySizeException extends java_lang_RuntimeException {}
+{}
+one sig java_lang_NegativeArraySizeExceptionLit extends java_lang_NegativeArraySizeException {}
+{}
+

@@ -1,0 +1,6 @@
+sig java_util_Iterator extends java_lang_Object {}
+{}
+
+
+
+

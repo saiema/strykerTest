@@ -1,0 +1,82 @@
+//-------------- org_jmlspecs_models_JMLObjectSequence --------------//
+module org_jmlspecs_models_JMLObjectSequence
+abstract sig org_jmlspecs_models_JMLObjectSequence {}
+{}
+field JMLObjectSequence_contains:(org_jmlspecs_models_JMLObjectSequence)->(seq(univ)) {}
+
+program org_jmlspecs_models_JMLObjectSequence::get[
+  var thiz:org_jmlspecs_models_JMLObjectSequence,
+  var throw:java_lang_Throwable+null,
+  var return:univ,
+  var index:Int] 
+Specification 
+{
+  SpecCase #0 {
+   requires {
+      gte[index,
+         0]
+      and 
+      lt[index,
+        fun_list_size[thiz]]
+   }
+   
+   ensures {
+      equ[return',
+         fun_list_get[thiz,index]]
+   }
+  }
+}
+Implementation 
+
+   {
+      throw:=null;
+      return:=fun_list_get[thiz,index];
+   
+   }
+
+
+program org_jmlspecs_models_JMLObjectSequence::int_size[
+  var thiz:org_jmlspecs_models_JMLObjectSequence,
+  var throw:java_lang_Throwable+null,
+  var return:Int] 
+Specification 
+{
+  SpecCase #0 {
+   ensures {
+      equ[return',
+         fun_list_size[thiz]]
+   }
+  }
+}
+Implementation 
+
+   {
+      throw:=null;
+      return:=fun_list_size[thiz];
+   
+   }
+
+
+program org_jmlspecs_models_JMLObjectSequence::isEmpty[
+  var thiz:org_jmlspecs_models_JMLObjectSequence,
+  var throw:java_lang_Throwable+null,
+  var return:boolean] 
+Specification 
+{
+  SpecCase #0 {
+   ensures {
+      equ[return',
+         fun_list_empty[thiz]]
+   }
+  }
+}
+Implementation 
+
+   {
+      throw:=null;
+      return:=fun_list_empty[thiz];
+   
+   }
+
+
+

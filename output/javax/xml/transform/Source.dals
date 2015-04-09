@@ -1,0 +1,6 @@
+abstract sig javax_xml_transform_Source extends java_lang_Object {}
+{}
+
+
+
+

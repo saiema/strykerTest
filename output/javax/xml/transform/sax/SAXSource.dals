@@ -1,0 +1,6 @@
+sig javax_xml_transform_sax_SAXSource extends javax_xml_transform_Source {}
+{}
+
+
+
+

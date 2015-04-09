@@ -1,0 +1,6 @@
+sig java_lang_Character extends java_lang_Object {}
+{}
+
+
+
+

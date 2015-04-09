@@ -1,0 +1,16 @@
+//-------------- java_util_NoSuchElementException --------------//
+module java_util_NoSuchElementException
+abstract one sig java_util_NoSuchElementException extends java_lang_Exception {}
+{}
+one sig java_util_NoSuchElementExceptionLit extends java_util_NoSuchElementException {}
+{}
+
+program java_util_NoSuchElementException::Constructor[
+  var thiz:java_util_NoSuchElementException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

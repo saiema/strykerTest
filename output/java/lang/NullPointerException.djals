@@ -1,0 +1,16 @@
+//-------------- java_lang_NullPointerException --------------//
+module java_lang_NullPointerException
+abstract one sig java_lang_NullPointerException extends java_lang_RuntimeException {}
+{}
+one sig java_lang_NullPointerExceptionLit extends java_lang_NullPointerException {}
+{}
+
+program java_lang_NullPointerException::Constructor[
+  var thiz:java_lang_NullPointerException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

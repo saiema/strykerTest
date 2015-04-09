@@ -1,0 +1,16 @@
+//-------------- java_lang_IllegalArgumentException --------------//
+module java_lang_IllegalArgumentException
+abstract one sig java_lang_IllegalArgumentException extends java_lang_RuntimeException {}
+{}
+one sig java_lang_IllegalArgumentExceptionLit extends java_lang_IllegalArgumentException {}
+{}
+
+program java_lang_IllegalArgumentException::Constructor[
+  var thiz:java_lang_IllegalArgumentException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

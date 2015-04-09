@@ -1,0 +1,16 @@
+//-------------- java_lang_RuntimeException --------------//
+module java_lang_RuntimeException
+abstract sig java_lang_RuntimeException extends java_lang_Exception {}
+{}
+one sig java_lang_RuntimeExceptionLit extends java_lang_RuntimeException {}
+{}
+
+program java_lang_RuntimeException::Constructor[
+  var thiz:java_lang_RuntimeException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+

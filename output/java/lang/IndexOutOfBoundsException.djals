@@ -1,0 +1,16 @@
+//-------------- java_lang_IndexOutOfBoundsException --------------//
+module java_lang_IndexOutOfBoundsException
+abstract one sig java_lang_IndexOutOfBoundsException extends java_lang_RuntimeException {}
+{}
+one sig java_lang_IndexOutOfBoundsExceptionLit extends java_lang_IndexOutOfBoundsException {}
+{}
+
+program java_lang_IndexOutOfBoundsException::Constructor[
+  var thiz:java_lang_IndexOutOfBoundsException,
+  var throw:java_lang_Throwable+null] 
+Implementation 
+
+   skip;
+
+
+
